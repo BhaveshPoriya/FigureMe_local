@@ -34,6 +34,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
+    
+    UITextField *theTextFiels=[[UITextField alloc]initWithFrame:CGRectMake(26, 250, 250, 41)];
+    theTextFiels.borderStyle=UITextBorderStyleRoundedRect;
+    [theTextFiels setText:@"Username"];
+    [theTextFiels setFont:[UIFont systemFontOfSize:18]];
+    [theTextFiels setTextColor:[UIColor whiteColor]];
+    theTextFiels.layer.cornerRadius=8.0f;
+    theTextFiels.layer.masksToBounds=YES;
+    theTextFiels.backgroundColor=[UIColor blueColor];
+    theTextFiels.layer.borderColor=[[UIColor blackColor]CGColor];
+    theTextFiels.layer.borderWidth= 1.0f;    
+    [self.view addSubview:theTextFiels];
+    
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
