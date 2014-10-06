@@ -10,7 +10,7 @@
 #import "Constant.h"
 
 
-@interface LoginController : UIViewController
+@interface LoginController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;

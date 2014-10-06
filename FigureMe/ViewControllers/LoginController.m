@@ -82,9 +82,10 @@ txtPassword = _txtPassword;
     NSString *username = self.txtUsername.text;
     NSString *password = self.txtPassword.text;
     
-    //sleep(10);
+    NSMutableURLRequest *_request = [CommanFunctions getLogInRequest:username Password:password];
+    _request.timeoutInterval = 30;
     
-    [NSURLConnection sendAsynchronousRequest:[CommanFunctions getLogInRequest:username Password:password]
+    [NSURLConnection sendAsynchronousRequest:_request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
                                                NSData *data, NSError *connectionError)
@@ -126,7 +127,7 @@ txtPassword = _txtPassword;
 {
     self.spinnerOverlay = [[UIView alloc] initWithFrame:self.view.frame];
     self.spinnerOverlay.backgroundColor = [UIColor blackColor];
-    self.spinnerOverlay.alpha = 0.60f;
+    self.spinnerOverlay.alpha = 0.50f;
     
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0)];
