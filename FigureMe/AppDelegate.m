@@ -14,6 +14,7 @@
 {
     // Override point for customization after application launch.
     //mitesh
+    //Hello
     // Handle launching from a notification
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (locationNotification) {
