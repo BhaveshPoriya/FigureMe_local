@@ -44,7 +44,7 @@
     theTextFiels.layer.masksToBounds=YES;
     theTextFiels.backgroundColor=[UIColor blueColor];
     theTextFiels.layer.borderColor=[[UIColor blackColor]CGColor];
-    theTextFiels.layer.borderWidth= 1.0f;    
+    //theTextFiels.layer.borderWidth= 1.0f;
     [self.view addSubview:theTextFiels];
     
     
