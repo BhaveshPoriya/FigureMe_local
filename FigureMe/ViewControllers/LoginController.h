@@ -12,10 +12,14 @@
 
 @interface LoginController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *txtUsername;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnRegister;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 
 
+@property (strong, nonatomic) IBOutlet UIView *spinnerOverlay;
+@property (strong, nonatomic) UIActivityIndicatorView *spinner;
 
 
 - (IBAction)btnRegisterClicked:(id)sender;

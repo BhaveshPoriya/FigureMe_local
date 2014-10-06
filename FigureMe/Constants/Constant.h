@@ -11,5 +11,14 @@
 #import "AMSlideMenuMainViewController.h"
 #import "CommanFunctions.h"
 
+#pragma mark - iOS Devices
+#define IS_IPAD   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_35 ([[UIScreen mainScreen] bounds].size.height == 480)
+#define IS_IPHONE_40 ([[UIScreen mainScreen] bounds].size.height == 568)
+
+#pragma mark - API
+#define APIRootURL "http://www.ecsprojects.com/figureme/api"
+
 
 #endif

@@ -36,5 +36,16 @@
     
     return request;
 }
++(NSMutableURLRequest *)getLogInRequest:(NSString *)Username Password:(NSString* )Password{
+    
+    NSMutableDictionary *reqDist = [[NSMutableDictionary alloc] init];
+    [reqDist setObject:@"login" forKey:@"action"];
+    [reqDist setObject:Username forKey:@"username"];
+    [reqDist setObject:Password forKey:@"password"];
+
+    NSString *_URL =[NSString stringWithFormat:@"%@/login", @APIRootURL];
+    
+    return [self generateAPIRequest:_URL reqDist:reqDist];
+}
 
 @end

@@ -15,7 +15,8 @@
 @implementation LoginController
 
 #pragma mark - Properties
-
+@synthesize txtUsername = _txtUsername,
+txtPassword = _txtPassword;
 
 
 #pragma mark - View Lifecycle
@@ -35,23 +36,6 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
     
-    UITextField *theTextFiels=[[UITextField alloc]initWithFrame:CGRectMake(26, 250, 250, 41)];
-    theTextFiels.borderStyle=UITextBorderStyleRoundedRect;
-    [theTextFiels setText:@"Username"];
-    [theTextFiels setFont:[UIFont systemFontOfSize:18]];
-    [theTextFiels setTextColor:[UIColor whiteColor]];
-    theTextFiels.layer.cornerRadius=8.0f;
-    theTextFiels.layer.masksToBounds=YES;
-    theTextFiels.backgroundColor=[UIColor blueColor];
-    theTextFiels.layer.borderColor=[[UIColor blackColor]CGColor];
-    //theTextFiels.layer.borderWidth= 1.0f;
-    [self.view addSubview:theTextFiels];
-    
-    
-    
-    
-    
-    
     
 }
 
@@ -67,28 +51,40 @@
 
 #pragma mark - Control Delegates
 
-- (IBAction)btnRegisterClicked:(id)sender {
+- (IBAction)btnRegisterClicked:(id)sender
+{
     [self performSegueWithIdentifier:@"PushLoginToRegister" sender:Nil];
 }
 
-- (IBAction)btnLoginClicked:(id)sender{
-    
-    NSString *username = @"";
-    NSString *password = @"";
-    
-    username = @"Nimisha Patel";
-    password = @"nimisha123";
-    
-    NSMutableDictionary *reqDist = [[NSMutableDictionary alloc] init];
-    [reqDist setObject:@"login" forKey:@"action"];
-    [reqDist setObject:username forKey:@"username"];
-    [reqDist setObject:password forKey:@"password"];
-    
-    NSString *_url= @"http://www.ecsprojects.com/figureme/api/login";
-    
-    NSMutableURLRequest *_request = [CommanFunctions generateAPIRequest:_url reqDist:reqDist];
+- (IBAction)btnLoginClicked:(id)sender
+{
+    if(![self.txtUsername.text isEqualToString:@""] && ![self.txtPassword.text isEqualToString:@""])
+    {
+        [self addOverLay];
+        NSOperationQueue *queue = [NSOperationQueue new];
+        NSInvocationOperation *operation = [[NSInvocationOperation alloc]
+                                        initWithTarget:self
+                                        selector:@selector(processLogInRequest)
+                                        object:Nil];
+        [queue addOperation:operation];
+    }
+    else
+    {
+        NSLog(@"Username or password is required");
+    }
+}
 
-    [NSURLConnection sendAsynchronousRequest:_request
+
+#pragma mark - API Processes
+
+- (void) processLogInRequest
+{
+    NSString *username = self.txtUsername.text;
+    NSString *password = self.txtPassword.text;
+    
+    //sleep(10);
+    
+    [NSURLConnection sendAsynchronousRequest:[CommanFunctions getLogInRequest:username Password:password]
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response,
                                                NSData *data, NSError *connectionError)
@@ -96,18 +92,63 @@
          if (data.length > 0 && connectionError == nil)
          {
              NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-             NSString *status = [greeting objectForKey:@"status"];
-             if([status isEqualToString:@"success"])
-             {
-                [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
-             }
-             else
-             {
-                 NSLog(@"Username or password is invalid");
-             }
+             [self performSelectorOnMainThread:@selector(handleAPIResponse:) withObject:greeting waitUntilDone:NO];
+         }
+         else
+         {
+             [self removeOverLay];
          }
      }];
+
+}
+
+- (void) handleAPIResponse:(NSDictionary *)data
+{
+    NSString *status = [data objectForKey:@"status"];
+    if([status isEqualToString:@"success"])
+    {
+        NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
+        [_defaults setBool:YES forKey:@"isLoggedIn"];
+        [_defaults synchronize];
+        [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
+    }
+    else
+    {
+        NSLog(@"Username or password is invalid");
+        [self removeOverLay];
+    }
+}
+
+
+#pragma mark - Custom Delegates
+
+- (void)addOverLay
+{
+    self.spinnerOverlay = [[UIView alloc] initWithFrame:self.view.frame];
+    self.spinnerOverlay.backgroundColor = [UIColor blackColor];
+    self.spinnerOverlay.alpha = 0.60f;
     
+    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0)];
+    [self.spinnerOverlay addSubview:self.spinner];
+    [self.spinner startAnimating];
+    
+    [self.view addSubview:self.spinnerOverlay];
+    [self.view bringSubviewToFront:self.spinnerOverlay];
+}
+
+- (void)removeOverLay
+{
+    [self.spinner stopAnimating];
+    [self.spinnerOverlay removeFromSuperview];
+}
+
+#pragma mark - UITextField Delegates
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
