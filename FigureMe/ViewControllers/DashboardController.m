@@ -30,13 +30,13 @@
     self.navigationController.navigationBarHidden = NO;
     
     // Schedule the notification
-    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    /*UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:20];    localNotification.alertBody = @"Incoming Test";
     localNotification.alertAction = @"Take the Test";
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    //[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    
+     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    */
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,10 +12,14 @@
 
 @interface LoginController : UIViewController <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnRegister;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
+@property (weak, nonatomic) IBOutlet UIButton *btnShowPassword;
+- (IBAction)btnShowPasswordClicked:(id)sender;
 
 
 @property (strong, nonatomic) IBOutlet UIView *spinnerOverlay;

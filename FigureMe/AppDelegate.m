@@ -17,6 +17,8 @@
     //Hello
     //Bhavesh
     // Handle launching from a notification
+    application.applicationIconBadgeNumber = 0;
+
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (locationNotification) {
         // Set icon badge number to zero

@@ -98,6 +98,12 @@
 		F4B6965A19E3D4F50065BF4F /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6965219E3D4F50065BF4F /* TPKeyboardAvoidingTableView.m */; };
 		F4B6965B19E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6965419E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		F4B6965C19E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6965419E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		F4B6965F19E413700065BF4F /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6965D19E413700065BF4F /* right.png */; };
+		F4B6966019E413700065BF4F /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6965D19E413700065BF4F /* right.png */; };
+		F4B6966119E413700065BF4F /* wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6965E19E413700065BF4F /* wrong.png */; };
+		F4B6966219E413700065BF4F /* wrong.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6965E19E413700065BF4F /* wrong.png */; };
+		F4B6966419E429180065BF4F /* screen-shot.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6966319E429180065BF4F /* screen-shot.png */; };
+		F4B6966519E429180065BF4F /* screen-shot.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B6966319E429180065BF4F /* screen-shot.png */; };
 		F4C1E5B119DE7C16003C108A /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1E5B019DE7C16003C108A /* Storyboard-iPad.storyboard */; };
 		F4C1E5B219DE7C16003C108A /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1E5B019DE7C16003C108A /* Storyboard-iPad.storyboard */; };
 		F4C1E5B519DE82F4003C108A /* menuicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C1E5B419DE82F4003C108A /* menuicon@2x.png */; };
@@ -203,6 +209,9 @@
 		F4B6965219E3D4F50065BF4F /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = Helper/TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		F4B6965319E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "Helper/TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		F4B6965419E3D4F50065BF4F /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "Helper/TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		F4B6965D19E413700065BF4F /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		F4B6965E19E413700065BF4F /* wrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrong.png; sourceTree = "<group>"; };
+		F4B6966319E429180065BF4F /* screen-shot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen-shot.png"; sourceTree = "<group>"; };
 		F4C1E5B019DE7C16003C108A /* Storyboard-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Storyboard-iPad.storyboard"; path = "Storyboards/Storyboard-iPad.storyboard"; sourceTree = "<group>"; };
 		F4C1E5B419DE82F4003C108A /* menuicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menuicon@2x.png"; path = "Resources/images/menuicon@2x.png"; sourceTree = "<group>"; };
 		F4C1E5BF19DE87DF003C108A /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileController.h; path = ViewControllers/ProfileController.h; sourceTree = "<group>"; };
@@ -243,6 +252,9 @@
 		C3235A9119E2DD3800263F98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F4B6966319E429180065BF4F /* screen-shot.png */,
+				F4B6965D19E413700065BF4F /* right.png */,
+				F4B6965E19E413700065BF4F /* wrong.png */,
 				C3235A9219E2DD3800263F98 /* bg.png */,
 			);
 			name = Common;
@@ -559,6 +571,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = ECS;
 				TargetAttributes = {
+					F43FAD4519DD3C2300C620E8 = {
+						DevelopmentTeam = RZ24PB64ZM;
+					};
 					F43FAD6019DD3C2400C620E8 = {
 						TestTargetID = F43FAD4519DD3C2300C620E8;
 					};
@@ -594,9 +609,11 @@
 				C3235A8019E2C68C00263F98 /* login-userbg.png in Resources */,
 				C3235A8119E2C68C00263F98 /* login-username.png in Resources */,
 				F440AFF019E2B5B7008F7566 /* password-hint.png in Resources */,
+				F4B6966419E429180065BF4F /* screen-shot.png in Resources */,
 				F440AFD819E2B582008F7566 /* menu.png in Resources */,
 				C3235A8419E2C73F00263F98 /* Bump-screen shot.jpg in Resources */,
 				F440AFEE19E2B5B7008F7566 /* logo.png in Resources */,
+				F4B6966119E413700065BF4F /* wrong.png in Resources */,
 				F4C1E5B519DE82F4003C108A /* menuicon@2x.png in Resources */,
 				F440B00619E2B5C4008F7566 /* cancel.png in Resources */,
 				F440B01619E2B5C4008F7566 /* username-bg.png in Resources */,
@@ -613,6 +630,7 @@
 				C3235A7919E2B97C00263F98 /* logoRegister.png in Resources */,
 				C3235A9919E2E00000263F98 /* passwordlogin.png in Resources */,
 				F43FAD5C19DD3C2400C620E8 /* Images.xcassets in Resources */,
+				F4B6965F19E413700065BF4F /* right.png in Resources */,
 				F440B01019E2B5C4008F7566 /* reapeat-password.png in Resources */,
 				C3235A9619E2DD8C00263F98 /* bgBump.png in Resources */,
 				F4C1E5C819DEA0C5003C108A /* messageicon@2x.png in Resources */,
@@ -635,6 +653,7 @@
 				F440B01319E2B5C4008F7566 /* register.png in Resources */,
 				F440AFF119E2B5B7008F7566 /* password-hint.png in Resources */,
 				F4C1E5B219DE7C16003C108A /* Storyboard-iPad.storyboard in Resources */,
+				F4B6966219E413700065BF4F /* wrong.png in Resources */,
 				F43FAD6D19DD3C2400C620E8 /* InfoPlist.strings in Resources */,
 				F440AFDD19E2B582008F7566 /* notification.png in Resources */,
 				F440B01119E2B5C4008F7566 /* reapeat-password.png in Resources */,
@@ -643,9 +662,11 @@
 				F440AFF719E2B5B7008F7566 /* screen-shot.jpg in Resources */,
 				F440AFD919E2B582008F7566 /* menu.png in Resources */,
 				F43FAD9319DD500100C620E8 /* Storyboard.storyboard in Resources */,
+				F4B6966019E413700065BF4F /* right.png in Resources */,
 				F440B00F19E2B5C4008F7566 /* password.png in Resources */,
 				F440B00B19E2B5C4008F7566 /* header-part.png in Resources */,
 				F440AFD719E2B582008F7566 /* header-part.png in Resources */,
+				F4B6966519E429180065BF4F /* screen-shot.png in Resources */,
 				F440B00919E2B5C4008F7566 /* email.png in Resources */,
 				C3235A9A19E2E00000263F98 /* passwordlogin.png in Resources */,
 			);
@@ -760,7 +781,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -778,6 +800,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "46498b64-2edd-4540-9fc7-727e8dbbbedb";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -799,7 +822,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -810,6 +834,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PROVISIONING_PROFILE = "46498b64-2edd-4540-9fc7-727e8dbbbedb";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -820,11 +845,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FigureMe/FigureMe-Prefix.pch";
 				INFOPLIST_FILE = "FigureMe/FigureMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "46498b64-2edd-4540-9fc7-727e8dbbbedb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -835,11 +862,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Prashant Agravat (2YDAJEJ3M5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FigureMe/FigureMe-Prefix.pch";
 				INFOPLIST_FILE = "FigureMe/FigureMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "46498b64-2edd-4540-9fc7-727e8dbbbedb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

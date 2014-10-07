@@ -26,8 +26,8 @@
 
 #pragma mark - API
 
-//#define APIRootURL "http://www.ecsprojects.com/figureme/api"
-#define APIRootURL "http://192.168.1.116:82/figureme/api"
+#define APIRootURL "http://www.ecsprojects.com/figureme/api"
+#define APIRootURL_LOCAL "http://192.168.1.116:82/figureme/api"
 
 
 #endif

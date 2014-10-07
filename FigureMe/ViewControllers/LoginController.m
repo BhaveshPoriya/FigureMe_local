@@ -35,7 +35,8 @@ txtPassword = _txtPassword;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = YES;
-    
+    [self.scrollView contentSizeToFit];
+    self.btnShowPassword.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
 }
 
@@ -58,67 +59,59 @@ txtPassword = _txtPassword;
 
 - (IBAction)btnLoginClicked:(id)sender
 {
+    [self.txtUsername resignFirstResponder];
+    [self.txtPassword resignFirstResponder];
+
     if(![self.txtUsername.text isEqualToString:@""] && ![self.txtPassword.text isEqualToString:@""])
     {
         [self addOverLay];
-        NSOperationQueue *queue = [NSOperationQueue new];
-        NSInvocationOperation *operation = [[NSInvocationOperation alloc]
-                                        initWithTarget:self
-                                        selector:@selector(processLogInRequest)
-                                        object:Nil];
-        [queue addOperation:operation];
+        
+        NSString *username = self.txtUsername.text;
+        NSString *password = self.txtPassword.text;
+        
+        NSMutableURLRequest *_request = [CommanFunctions getLogInRequest:username Password:password];
+        _request.timeoutInterval = 30;
+        
+        
+        [NSURLConnection sendAsynchronousRequest:_request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *data, NSError *connectionError)
+         {
+             if (data.length > 0 && connectionError == nil)
+             {
+                 NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                 NSString *status = [greeting objectForKey:@"status"];
+                 if([status isEqualToString:@"success"])
+                 {
+                     [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
+                 }
+                 else
+                 {
+                     [self.txtUsername becomeFirstResponder];
+                     
+                     NSString *message = [[greeting objectForKey:@"data"] objectForKey:@"message"];
+                     NSLog(@"%@",message);
+                     
+                     [self removeOverLay];
+                     
+                     UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"" message:@"Username or Password is invalid" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+                     [failAlert show];
+                     
+                 }
+             }
+             else
+             {
+                 [self removeOverLay];
+             }
+         }];
     }
     else
     {
-        NSLog(@"Username or password is required");
+        [self.txtUsername becomeFirstResponder];
     }
 }
 
-
-#pragma mark - API Processes
-
-- (void) processLogInRequest
-{
-    NSString *username = self.txtUsername.text;
-    NSString *password = self.txtPassword.text;
-    
-    NSMutableURLRequest *_request = [CommanFunctions getLogInRequest:username Password:password];
-    _request.timeoutInterval = 30;
-    
-    [NSURLConnection sendAsynchronousRequest:_request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response,
-                                               NSData *data, NSError *connectionError)
-     {
-         if (data.length > 0 && connectionError == nil)
-         {
-             NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-             [self performSelectorOnMainThread:@selector(handleAPIResponse:) withObject:greeting waitUntilDone:NO];
-         }
-         else
-         {
-             [self removeOverLay];
-         }
-     }];
-
-}
-
-- (void) handleAPIResponse:(NSDictionary *)data
-{
-    NSString *status = [data objectForKey:@"status"];
-    if([status isEqualToString:@"success"])
-    {
-        NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
-        [_defaults setBool:YES forKey:@"isLoggedIn"];
-        [_defaults synchronize];
-        [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
-    }
-    else
-    {
-        NSLog(@"Username or password is invalid");
-        [self removeOverLay];
-    }
-}
 
 
 #pragma mark - Custom Delegates
@@ -152,4 +145,7 @@ txtPassword = _txtPassword;
     return YES;
 }
 
+- (IBAction)btnShowPasswordClicked:(id)sender {
+    self.txtPassword.secureTextEntry = !self.txtPassword.secureTextEntry;
+}
 @end

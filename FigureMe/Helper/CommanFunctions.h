@@ -11,7 +11,12 @@
 
 @interface CommanFunctions : NSObject
 
++(BOOL)IsValidEmail:(NSString *)checkString;
+
 +(NSMutableURLRequest *)generateAPIRequest:(NSString *)APIUrl reqDist:(NSMutableDictionary* )reqDist;
 +(NSMutableURLRequest *)getLogInRequest:(NSString *)Username Password:(NSString* )Password;
++(NSMutableURLRequest *)getRegisterRequest:(NSString *)Username Email:(NSString* )Email Password:(NSString* )Password;
++(NSMutableURLRequest *)getCheckUsernameRequest:(NSString *)Username;
++(NSMutableURLRequest *)getCheckEmailRequest:(NSString *)Email;
 
 @end
