@@ -11,6 +11,13 @@
 
 @interface RegisterController : UIViewController
 
+@property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtUsername;
+@property (weak, nonatomic) IBOutlet UITextField *txtEmail;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+@property (weak, nonatomic) IBOutlet UITextField *txtRepeatPassword;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnRegister;
 @property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 

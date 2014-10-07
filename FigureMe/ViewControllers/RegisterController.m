@@ -16,6 +16,13 @@
 
 #pragma mark - Properties
 
+@synthesize scrollView = _scrollView;
+
+@synthesize txtUsername = _txtUsername,
+txtEmail = _txtEmail,
+txtPassword = _txtPassword,
+txtRepeatPassword = _txtRepeatPassword;
+
 
 #pragma mark - View Lifecycle
 
@@ -32,6 +39,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.scrollView contentSizeToFit];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +56,15 @@
 }
 - (IBAction)btnRegisterClicked:(id)sender{
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
+#pragma mark - UITextField Delegates
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
