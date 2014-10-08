@@ -29,6 +29,9 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = NO;
     
+    self.collViewDashboardGallery.layer.cornerRadius = 10.0f;
+    
+    
     // Schedule the notification
     /*UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:20];    localNotification.alertBody = @"Incoming Test";
@@ -49,6 +52,24 @@
 - (IBAction)showRightMenuPressed:(id)sender {
 }
 
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *PhotoCellIdentifier = @"MyDashboardPhotoCell";
+    
+    GalleryPhotoCell *photoCell = [collectionView dequeueReusableCellWithReuseIdentifier:PhotoCellIdentifier forIndexPath:indexPath];
+    photoCell.backgroundColor = [UIColor yellowColor];
+    photoCell.frame = CGRectMake(0+(60 * indexPath.row), 0, 60, 60);
+    
+    return photoCell;
+}
 
 
 @end

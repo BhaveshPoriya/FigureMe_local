@@ -14,6 +14,7 @@
 #import "TPKeyboardAvoidingScrollView.h"
 @class TPKeyboardAvoidingScrollView;
 
+#import "GalleryPhotoCell.h"
 
 
 #pragma mark - iOS Devices

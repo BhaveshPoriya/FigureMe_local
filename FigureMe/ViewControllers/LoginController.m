@@ -34,6 +34,10 @@ txtPassword = _txtPassword;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.txtUsername.text  = @"test3";
+    self.txtPassword.text  = @"test123";
+    
     self.navigationController.navigationBarHidden = YES;
     [self.scrollView contentSizeToFit];
     self.btnShowPassword.imageView.contentMode = UIViewContentModeScaleAspectFit;

@@ -150,26 +150,47 @@
                         <viewControllerLayoutGuide type="bottom" id="duT-FU-Z2y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IU1-UG-o3y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk4-LH-vuj">
-                                <rect key="frame" x="118" y="71" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7D-rn-pm2">
-                                <rect key="frame" x="118" y="100" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recieve Test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gray-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-dX-PbV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Hc-zV-Vou">
+                                <rect key="frame" x="20" y="104" width="280" height="444"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ue-nS-1bF">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyDashboardPhotoCell" id="d1S-pg-Om5" customClass="GalleryPhotoCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="efW-OT-2uk" id="qLl-kc-3l3"/>
+                                    <outlet property="delegate" destination="efW-OT-2uk" id="QtI-k7-Jqk"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dRs-b5-3OA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collViewDashboardGallery" destination="4Hc-zV-Vou" id="Qbs-4Q-78e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXw-TI-Sqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -544,7 +565,7 @@
             </objects>
             <point key="canvasLocation" x="-6963" y="-2126"/>
         </scene>
-        <!--Menu ContainerVC-->
+        <!--Menu ContainerVC - Data-->
         <scene sceneID="0e9-yb-gra">
             <objects>
                 <viewController id="2yH-DX-Edc" customClass="MenuContainerVC" sceneMemberID="viewController">
@@ -557,7 +578,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yke-9C-FXo"/>
+                    <navigationItem key="navigationItem" title="Data" id="Yke-9C-FXo"/>
                     <connections>
                         <segue destination="3aU-U4-b9k" kind="custom" identifier="rightMenu" customClass="AMSlideMenuRightMenuSegue" id="fi3-iI-wnB"/>
                     </connections>
@@ -888,7 +909,8 @@
         <image name="bg.png" width="1536" height="2048"/>
         <image name="cancel.png" width="955" height="164"/>
         <image name="email.png" width="59" height="40"/>
-        <image name="header-part.png" width="1536" height="291"/>
+        <image name="gray-bg.png" width="639" height="981"/>
+        <image name="header-part.png" width="320" height="64"/>
         <image name="login-userbg.png" width="955" height="164"/>
         <image name="login-username.png" width="59" height="63"/>
         <image name="login.png" width="955" height="165"/>

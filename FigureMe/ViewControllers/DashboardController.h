@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Constant.h"
 
-@interface DashboardController : UIViewController
+@interface DashboardController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collViewDashboardGallery;
 
 @end

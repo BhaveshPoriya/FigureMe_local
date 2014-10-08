@@ -42,9 +42,13 @@
     AMSlideMenuMainViewController *mainVC = (AMSlideMenuMainViewController *)sourceVC.parentViewController;    
     
     UINavigationItem *navItem = mainVC.currentActiveNVC.navigationBar.topItem;
+    UINavigationBar *navBar = mainVC.currentActiveNVC.navigationBar;
     
     if (!navItem)
         navItem = destinationNVC.navigationBar.topItem;
+    
+    if (!navBar)
+        navBar = destinationNVC.navigationBar;
     
     if (!mainVC.isInitialStart)
     {
@@ -85,6 +89,17 @@
         [barView addSubview:rightNotiBtn];
         
         navItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:barView];
+        
+        UIView *leftBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 33)];
+        [leftBarView setBackgroundColor:[UIColor clearColor]];
+        
+        UIImageView *_imgViewHeaderLogo = [[UIImageView alloc] initWithFrame:leftBarView.frame];
+        _imgViewHeaderLogo.image = [UIImage imageNamed:@"header-logo.png"];
+        [leftBarView addSubview:_imgViewHeaderLogo];
+        
+        navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarView];
+        
+        [navBar setBackgroundImage:[UIImage imageNamed:@"header-part.png"] forBarMetrics:UIBarMetricsDefault];
     }
 
 
