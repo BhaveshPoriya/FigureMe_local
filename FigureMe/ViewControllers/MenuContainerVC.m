@@ -63,6 +63,16 @@
             break;
         case 5:
             identifier = @"logout";
+            
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            [defaults setBool:nil forKey:@"isLoggedIn"];
+            [defaults setObject:nil forKey:@"userID"];
+            
+            [defaults synchronize];
+            
+            [self performSegueWithIdentifier:@"PushLogOut" sender:Nil];
+            
             break;
     }
     return identifier;

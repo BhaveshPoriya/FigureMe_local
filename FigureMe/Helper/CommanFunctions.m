@@ -10,6 +10,8 @@
 
 @implementation CommanFunctions
 
+
+
 +(BOOL)IsValidEmail:(NSString *)checkString
 {
     BOOL stricterFilter = NO; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/

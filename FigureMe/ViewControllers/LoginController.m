@@ -34,14 +34,23 @@ txtPassword = _txtPassword;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.txtUsername.text  = @"test3";
-    self.txtPassword.text  = @"test123";
-    
+   
     self.navigationController.navigationBarHidden = YES;
     [self.scrollView contentSizeToFit];
     self.btnShowPassword.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL isLoggedIn = [defaults valueForKey:@"isLoggedIn"];
+    
+    if (isLoggedIn) {
+        [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
+    }
+    else
+    {
+        self.txtUsername.text  = @"test3";
+        self.txtPassword.text  = @"test123";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,6 +97,13 @@ txtPassword = _txtPassword;
                  NSString *status = [greeting objectForKey:@"status"];
                  if([status isEqualToString:@"success"])
                  {
+                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                     
+                     [defaults setBool:YES forKey:@"isLoggedIn"];
+                     [defaults setObject:@"15" forKey:@"userID"];
+                     
+                     [defaults synchronize];
+                     
                      [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];
                  }
                  else

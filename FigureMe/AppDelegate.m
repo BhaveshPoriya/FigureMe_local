@@ -14,7 +14,7 @@
 {
     // Override point for customization after application launch.
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Handle launching from a notification
    /* application.applicationIconBadgeNumber = 0;

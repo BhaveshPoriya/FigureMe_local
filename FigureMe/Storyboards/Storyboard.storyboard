@@ -157,39 +157,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Hc-zV-Vou">
-                                <rect key="frame" x="20" y="104" width="280" height="444"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ue-nS-1bF">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyDashboardPhotoCell" id="d1S-pg-Om5" customClass="GalleryPhotoCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P80-xd-uud">
+                                <rect key="frame" x="247" y="76" width="53" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="see-all.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outlet property="dataSource" destination="efW-OT-2uk" id="qLl-kc-3l3"/>
-                                    <outlet property="delegate" destination="efW-OT-2uk" id="QtI-k7-Jqk"/>
+                                    <action selector="btnSeeAllClicked:" destination="efW-OT-2uk" eventType="touchUpInside" id="aPu-h0-PKv"/>
                                 </connections>
-                            </collectionView>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Scores" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-mP-bAO">
+                                <rect key="frame" x="20" y="75" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dRs-b5-3OA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="collViewDashboardGallery" destination="4Hc-zV-Vou" id="Qbs-4Q-78e"/>
+                        <outlet property="btnSeeAll" destination="P80-xd-uud" id="fv6-FL-BNq"/>
+                        <segue destination="ATs-Uo-5Sa" kind="push" identifier="PushDashboardToGallery" id="GWp-h9-D6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXw-TI-Sqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -558,6 +551,7 @@
                         <segue destination="cFH-rF-1YO" kind="custom" identifier="stats" customClass="AMSlideMenuContentSegue" id="WkQ-O0-wgr"/>
                         <segue destination="dyb-M4-QhO" kind="custom" identifier="bump" customClass="AMSlideMenuContentSegue" id="DZu-t0-hXx"/>
                         <segue destination="U5k-Xl-IDq" kind="custom" customClass="AMSlideMenuContentSegue" id="T1L-VI-TC2"/>
+                        <segue destination="ido-c2-mus" kind="custom" customClass="AMSlideMenuContentSegue" id="ZvT-MH-RCX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXF-LU-8Na" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -581,11 +575,12 @@
                     <navigationItem key="navigationItem" title="Data" id="Yke-9C-FXo"/>
                     <connections>
                         <segue destination="3aU-U4-b9k" kind="custom" identifier="rightMenu" customClass="AMSlideMenuRightMenuSegue" id="fi3-iI-wnB"/>
+                        <segue destination="6RM-pP-mJ9" kind="custom" identifier="PushLogOut" id="cTR-oQ-uFl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXP-XZ-5QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7517" y="-1714"/>
+            <point key="canvasLocation" x="-7435" y="-1637"/>
         </scene>
         <!--Profile Controller-->
         <scene sceneID="XrN-DS-IAa">
@@ -596,9 +591,13 @@
                         <viewControllerLayoutGuide type="bottom" id="AjZ-NL-Qd0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IMf-eq-5BQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gray-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmC-QD-dH7">
+                                <rect key="frame" x="0.0" y="63" width="320" height="510"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUP-cq-7fd">
                                 <rect key="frame" x="136" y="69" width="49" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -619,6 +618,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nOe-b5-Lfr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnEditProfile" destination="PsD-xI-RwB" id="mzN-dN-Rhg"/>
                         <segue destination="Wxl-gM-DKg" kind="push" identifier="PushToEditProfile" id="12s-Pu-9XJ"/>
@@ -637,7 +637,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Nor-Df-7YW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hq8-TU-IPX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-eF-fvH">
@@ -890,6 +890,41 @@
             <point key="canvasLocation" x="-5911" y="334"/>
         </scene>
         <!--Navigation Controller-->
+        <scene sceneID="N0l-fz-Wj0">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ido-c2-mus" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ubB-3l-Aj3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="87B-WC-2qT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ATs-Uo-5Sa" kind="relationship" relationship="rootViewController" id="a4H-wZ-a2s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30k-W9-hau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5111" y="-2232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pJv-HA-IFl">
+            <objects>
+                <viewController id="ATs-Uo-5Sa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ENk-ZE-1eb"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQw-bo-5RN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wai-yT-YB4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="guK-A5-PUs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQg-PC-zwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5014" y="-3052"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="orw-ZY-TWu">
             <objects>
                 <navigationController definesPresentationContext="YES" id="U5k-Xl-IDq" sceneMemberID="viewController">
@@ -922,6 +957,7 @@
         <image name="reapeat-password.png" width="74" height="61"/>
         <image name="register.png" width="955" height="165"/>
         <image name="registerlogin.png" width="955" height="164"/>
+        <image name="see-all.png" width="150" height="59"/>
         <image name="username-bg.png" width="955" height="165"/>
         <image name="username.png" width="59" height="63"/>
     </resources>
@@ -930,4 +966,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="cTR-oQ-uFl"/>
+        <segue reference="GWp-h9-D6v"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IIIFlowView.h"
+
 
 @interface ProfileController : UIViewController
+
+
+
 @property (weak, nonatomic) IBOutlet UIButton *btnEditProfile;
+
+
 - (IBAction)btnEditProfileClicked:(id)sender;
 
 @end

@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Constant.h"
 
-@interface DashboardController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UICollectionView *collViewDashboardGallery;
+@interface DashboardController : UIViewController <IIIFlowViewDelegate>
+
+#pragma mark - IIIFlowView Properties
+@property (strong, nonatomic) IIIFlowView *galleryFlowview;
+@property (strong, nonatomic)NSMutableArray *dataSource;
+@property (strong, nonatomic)NSMutableArray *testA;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSeeAll;
+
+
+- (IBAction)btnSeeAllClicked:(id)sender;
 
 @end
