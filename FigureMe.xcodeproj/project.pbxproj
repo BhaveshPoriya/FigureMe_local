@@ -21,7 +21,6 @@
 		C32FDB9919E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
 		C32FDB9A19E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
 		C32FDB9D19E7CAFD00CD60BE /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */; };
-		C32FDB9E19E7CAFD00CD60BE /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */; };
 		C32FDBA119E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
 		C32FDBA219E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
 		C32FDBB119E7E92A00CD60BE /* deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */; };
@@ -58,6 +57,8 @@
 		C3BC2F0A19E8170700295626 /* scrore.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0819E8170700295626 /* scrore.png */; };
 		C3BC2F0C19E8178A00295626 /* your-scrore-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */; };
 		C3BC2F0D19E8178A00295626 /* your-scrore-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */; };
+		C3CD542F19EBE08200C62E51 /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CD542E19EBE08200C62E51 /* StatYourScore.m */; };
+		C3CD543019EBE08200C62E51 /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CD542E19EBE08200C62E51 /* StatYourScore.m */; };
 		F43FAD4A19DD3C2300C620E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4919DD3C2300C620E8 /* Foundation.framework */; };
 		F43FAD4C19DD3C2300C620E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */; };
 		F43FAD4E19DD3C2300C620E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4D19DD3C2300C620E8 /* UIKit.framework */; };
@@ -229,7 +230,6 @@
 		C3235A9819E2E00000263F98 /* passwordlogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passwordlogin.png; path = Resources/images/login/passwordlogin.png; sourceTree = "<group>"; };
 		C32FDB9719E7C33500CD60BE /* StatInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatInfoCell.h; path = CustomCells/StatInfoCell.h; sourceTree = "<group>"; };
 		C32FDB9819E7C33500CD60BE /* StatInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatInfoCell.m; path = CustomCells/StatInfoCell.m; sourceTree = "<group>"; };
-		C32FDB9B19E7CAFD00CD60BE /* StatYourScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatYourScore.h; path = ViewControllers/StatYourScore.h; sourceTree = "<group>"; };
 		C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatYourScore.m; path = ViewControllers/StatYourScore.m; sourceTree = "<group>"; };
 		C32FDBA019E7D30D00CD60BE /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleted-friends-hover.png"; sourceTree = "<group>"; };
@@ -250,6 +250,8 @@
 		C3BC2F0319E8133A00295626 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Models/Score.m; sourceTree = "<group>"; };
 		C3BC2F0819E8170700295626 /* scrore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrore.png; sourceTree = "<group>"; };
 		C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "your-scrore-hover.png"; sourceTree = "<group>"; };
+		C3CD542D19EBE08200C62E51 /* StatYourScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatYourScore.h; path = ViewControllers/StatYourScore.h; sourceTree = "<group>"; };
+		C3CD542E19EBE08200C62E51 /* StatYourScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatYourScore.m; path = ViewControllers/StatYourScore.m; sourceTree = "<group>"; };
 		F43FAD4619DD3C2300C620E8 /* FigureMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigureMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43FAD4919DD3C2300C620E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -579,6 +581,8 @@
 		F43FAD9719DD506600C620E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD542D19EBE08200C62E51 /* StatYourScore.h */,
+				C3CD542E19EBE08200C62E51 /* StatYourScore.m */,
 				F43FADD819DD983000C620E8 /* MenuContainerVC.h */,
 				F43FADD919DD983000C620E8 /* MenuContainerVC.m */,
 				F43FADD419DD94A100C620E8 /* RightMenuVC.h */,
@@ -1032,6 +1036,7 @@
 				F4CC9EDD19E5868D00B3388A /* SDImageCache+IIIThumb.m in Sources */,
 				F4CC9ED919E5868D00B3388A /* IIIFlowCell.m in Sources */,
 				F43FAD5619DD3C2400C620E8 /* main.m in Sources */,
+				C3CD542F19EBE08200C62E51 /* StatYourScore.m in Sources */,
 				F43FADC619DD93AE00C620E8 /* AMSlideMenuContentSegue.m in Sources */,
 				C3BC2F0419E8133A00295626 /* Score.m in Sources */,
 				C32FDB9919E7C33500CD60BE /* StatInfoCell.m in Sources */,
@@ -1064,6 +1069,7 @@
 				F43FADB319DD71A800C620E8 /* DashboardController.m in Sources */,
 				F4B6965819E3D4F50065BF4F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				F4B6965619E3D4F50065BF4F /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				C3CD543019EBE08200C62E51 /* StatYourScore.m in Sources */,
 				C32FDB9A19E7C33500CD60BE /* StatInfoCell.m in Sources */,
 				F4CC9EF919E586FE00B3388A /* SDWebImageManager.m in Sources */,
 				F43FADC919DD93AE00C620E8 /* AMSlideMenuLeftMenuSegue.m in Sources */,
