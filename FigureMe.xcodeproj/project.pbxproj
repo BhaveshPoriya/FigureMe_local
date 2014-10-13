@@ -20,7 +20,6 @@
 		C3235A9A19E2E00000263F98 /* passwordlogin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3235A9819E2E00000263F98 /* passwordlogin.png */; };
 		C32FDB9919E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
 		C32FDB9A19E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
-		C32FDB9D19E7CAFD00CD60BE /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */; };
 		C32FDBA119E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
 		C32FDBA219E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
 		C32FDBB119E7E92A00CD60BE /* deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */; };
@@ -59,6 +58,10 @@
 		C3BC2F0D19E8178A00295626 /* your-scrore-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */; };
 		C3CD542F19EBE08200C62E51 /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CD542E19EBE08200C62E51 /* StatYourScore.m */; };
 		C3CD543019EBE08200C62E51 /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CD542E19EBE08200C62E51 /* StatYourScore.m */; };
+		C3CD543219EBEC4500C62E51 /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CD543119EBEC4500C62E51 /* MyIcon.png */; };
+		C3CD543319EBEC4500C62E51 /* MyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CD543119EBEC4500C62E51 /* MyIcon.png */; };
+		C3CD543B19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CD543A19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png */; };
+		C3CD543C19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CD543A19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png */; };
 		F43FAD4A19DD3C2300C620E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4919DD3C2300C620E8 /* Foundation.framework */; };
 		F43FAD4C19DD3C2300C620E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */; };
 		F43FAD4E19DD3C2300C620E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4D19DD3C2300C620E8 /* UIKit.framework */; };
@@ -230,7 +233,6 @@
 		C3235A9819E2E00000263F98 /* passwordlogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passwordlogin.png; path = Resources/images/login/passwordlogin.png; sourceTree = "<group>"; };
 		C32FDB9719E7C33500CD60BE /* StatInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatInfoCell.h; path = CustomCells/StatInfoCell.h; sourceTree = "<group>"; };
 		C32FDB9819E7C33500CD60BE /* StatInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatInfoCell.m; path = CustomCells/StatInfoCell.m; sourceTree = "<group>"; };
-		C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatYourScore.m; path = ViewControllers/StatYourScore.m; sourceTree = "<group>"; };
 		C32FDBA019E7D30D00CD60BE /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleted-friends-hover.png"; sourceTree = "<group>"; };
 		C32FDBA419E7E92A00CD60BE /* deleted-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleted-friends.png"; sourceTree = "<group>"; };
@@ -252,6 +254,8 @@
 		C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "your-scrore-hover.png"; sourceTree = "<group>"; };
 		C3CD542D19EBE08200C62E51 /* StatYourScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatYourScore.h; path = ViewControllers/StatYourScore.h; sourceTree = "<group>"; };
 		C3CD542E19EBE08200C62E51 /* StatYourScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatYourScore.m; path = ViewControllers/StatYourScore.m; sourceTree = "<group>"; };
+		C3CD543119EBEC4500C62E51 /* MyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyIcon.png; sourceTree = "<group>"; };
+		C3CD543A19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Iphone-deleted-friends-hover.png"; sourceTree = "<group>"; };
 		F43FAD4619DD3C2300C620E8 /* FigureMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigureMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43FAD4919DD3C2300C620E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -456,6 +460,8 @@
 		C3BC2F0719E8170700295626 /* stat-Iphone */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD543A19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png */,
+				C3CD543119EBEC4500C62E51 /* MyIcon.png */,
 				C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */,
 				C3BC2F0819E8170700295626 /* scrore.png */,
 			);
@@ -892,12 +898,14 @@
 				F440B00819E2B5C4008F7566 /* email.png in Resources */,
 				F4CC9E7319E51D6F00B3388A /* notification.png in Resources */,
 				F4CC9E8219E53D5000B3388A /* gray-bg.png in Resources */,
+				C3CD543B19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png in Resources */,
 				C3235A9319E2DD3800263F98 /* bg.png in Resources */,
 				F4C04CD519E6C30C00556BA5 /* OpenSans-BoldItalic.ttf in Resources */,
 				C32FDBBB19E7E92A00CD60BE /* header-part.png in Resources */,
 				C32FDBC519E7E92A00CD60BE /* screen-shot.jpg in Resources */,
 				C3235A8619E2CC5400263F98 /* registerlogin.png in Resources */,
 				C3BC2F0919E8170700295626 /* scrore.png in Resources */,
+				C3CD543219EBEC4500C62E51 /* MyIcon.png in Resources */,
 				C3235A8019E2C68C00263F98 /* login-userbg.png in Resources */,
 				C32FDBBF19E7E92A00CD60BE /* johndoe-last-nav.png in Resources */,
 				C32FDBB319E7E92A00CD60BE /* deleted-friends.png in Resources */,
@@ -966,6 +974,7 @@
 				F4C04CDE19E6C30C00556BA5 /* OpenSans-Light.ttf in Resources */,
 				C32FDBBC19E7E92A00CD60BE /* header-part.png in Resources */,
 				C3235A9419E2DD3800263F98 /* bg.png in Resources */,
+				C3CD543C19EBF7D500C62E51 /* Iphone-deleted-friends-hover.png in Resources */,
 				C3235A9719E2DD8C00263F98 /* bgBump.png in Resources */,
 				C32FDBC419E7E92A00CD60BE /* score-hover.png in Resources */,
 				F4C04CC719E6AA4C00556BA5 /* galler-scrore-count.png in Resources */,
@@ -998,6 +1007,7 @@
 				F43FAD9319DD500100C620E8 /* Storyboard.storyboard in Resources */,
 				F4B6966019E413700065BF4F /* right.png in Resources */,
 				F4C04CD619E6C30C00556BA5 /* OpenSans-BoldItalic.ttf in Resources */,
+				C3CD543319EBEC4500C62E51 /* MyIcon.png in Resources */,
 				F440B00F19E2B5C4008F7566 /* password.png in Resources */,
 				F440B00B19E2B5C4008F7566 /* header-part.png in Resources */,
 				F4B6966519E429180065BF4F /* screen-shot.png in Resources */,
@@ -1020,7 +1030,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B6965719E3D4F50065BF4F /* TPKeyboardAvoidingScrollView.m in Sources */,
-				C32FDB9D19E7CAFD00CD60BE /* StatYourScore.m in Sources */,
 				F4CC9E6D19E5164E00B3388A /* ECSNaigationItem.m in Sources */,
 				F43FADC819DD93AE00C620E8 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				F4C1E5C119DE87DF003C108A /* ProfileController.m in Sources */,

@@ -18,5 +18,5 @@
 +(NSMutableURLRequest *)getRegisterRequest:(NSString *)Username Email:(NSString* )Email Password:(NSString* )Password;
 +(NSMutableURLRequest *)getCheckUsernameRequest:(NSString *)Username;
 +(NSMutableURLRequest *)getCheckEmailRequest:(NSString *)Email;
-
++(NSMutableURLRequest *)getScoreRequest:(NSString *)Score;
 @end

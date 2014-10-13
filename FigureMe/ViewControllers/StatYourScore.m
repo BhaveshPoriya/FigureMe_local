@@ -8,8 +8,12 @@
 
 #import "StatYourScore.h"
 #import "StatInfoCell.h"
-
+#import "CommanFunctions.h"
+#import "Score.h"
 @interface StatYourScore ()
+{
+    NSMutableArray *arrScores;
+}
 
 @end
 
@@ -28,8 +32,48 @@
 {
     [super viewDidLoad];
     
-    [self.tblViewStatYourScore reloadData];
     
+    
+    NSMutableURLRequest *_request = [CommanFunctions getScoreRequest:@"12"];
+    _request.timeoutInterval = 30;
+    
+    [NSURLConnection sendAsynchronousRequest:_request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data, NSError *connectionError)
+     {
+         if (data.length > 0 && connectionError == nil)
+         {
+             NSDictionary *greeting = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+             NSString *status = [[greeting  objectForKey:@"data"] objectForKey:@"status"];
+             if([status isEqualToString:@"success"])
+                
+             {
+                 arrScores = [[NSMutableArray alloc]init];
+                 NSDictionary *scores = [[greeting objectForKey:@"data"] objectForKey:@"score"];
+                 
+                 for(NSDictionary *_Score in scores)
+                     
+                 {
+                     NSDictionary *tempDist = [scores objectForKey:_Score];
+                     Score *scoreDetail = [[Score alloc]init];
+                     
+                     
+                     NSString *strScore = [NSString stringWithFormat:@"%@",[tempDist objectForKey:@"Score"]];
+                     scoreDetail.Score = strScore;
+                     scoreDetail.Name = [tempDist objectForKey:@"Name"];
+                     [arrScores addObject:scoreDetail];
+                     
+                     
+                 }
+                 
+                 [self.tblViewStatYourScore reloadData];
+             }
+          
+
+         }
+     }];
+
     [self.btnInstanceHeadingStatYourScore setTitle:@"Most Known Friends First" forState:UIControlStateNormal];
     
     self.btnInstanceHeadingStatYourScore.titleLabel.font = [UIFont fontWithName:@"OpenSans-Regular" size:21];
@@ -40,7 +84,7 @@
     
     // Do any additional setup after loading the view.
 }
-
+     
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -48,9 +92,8 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
-
 {
-    return 3;
+    return arrScores.count;
     
 }
 
@@ -66,9 +109,11 @@
         cell = [[StatInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    Score *score = [arrScores objectAtIndex:indexPath.row];
+    
     cell.imgviewStatInfoCell.image = [UIImage imageNamed:@"bgBump.png"];
-    cell.lblNameStatInfoCell.text = @"Joe Handsome";
-    cell.lblScoreStatInfoCell.text = @"120";
+    cell.lblNameStatInfoCell.text = score.Name;
+    cell.lblScoreStatInfoCell.text = score.Score;
     
     
     [cell.lblNameStatInfoCell setFont:[UIFont fontWithName:@"OpenSans-Light" size:14.0]];
