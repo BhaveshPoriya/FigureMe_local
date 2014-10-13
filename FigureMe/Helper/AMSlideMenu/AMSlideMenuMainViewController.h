@@ -28,6 +28,7 @@
 #import "AMSlideMenuProtocols.h"
 #import "AMSlideMenuLeftTableViewController.h"
 #import "AMSlideMenuRightTableViewController.h"
+#import "Constant.h"
 
 typedef enum {
     AMPrimaryMenuLeft,

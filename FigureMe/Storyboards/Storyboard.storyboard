@@ -903,18 +903,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30k-W9-hau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5111" y="-2232"/>
+            <point key="canvasLocation" x="-5480" y="-3227"/>
         </scene>
-        <!--View Controller-->
+        <!--Gallery Controller-->
         <scene sceneID="pJv-HA-IFl">
             <objects>
-                <viewController id="ATs-Uo-5Sa" sceneMemberID="viewController">
+                <viewController id="ATs-Uo-5Sa" customClass="GalleryController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ENk-ZE-1eb"/>
                         <viewControllerLayoutGuide type="bottom" id="eQw-bo-5RN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wai-yT-YB4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -922,7 +922,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQg-PC-zwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5014" y="-3052"/>
+            <point key="canvasLocation" x="-5044" y="-3038"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="orw-ZY-TWu">
@@ -968,6 +968,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cTR-oQ-uFl"/>
-        <segue reference="GWp-h9-D6v"/>
+        <segue reference="a4H-wZ-a2s"/>
     </inferredMetricsTieBreakers>
 </document>

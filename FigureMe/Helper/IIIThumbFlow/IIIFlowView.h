@@ -29,6 +29,7 @@ typedef struct {
 @property (strong, nonatomic) id<IIIFlowViewDelegate> flowDelegate;
 
 - (IIIFlowCell *)dequeueReusableCellWithId: (NSString *)idStr;
+- (void)hideDownloadingPlaceholder;
 - (void)unloadData;
 - (void)reloadData;
 

@@ -587,7 +587,7 @@ static NSMutableArray *allInstances;
 }
 
 - (void)openRightMenuAnimated:(BOOL)animated
-{
+{ 
     if (self.slideMenuDelegate && [self.slideMenuDelegate respondsToSelector:@selector(rightMenuWillOpen)])
         [self.slideMenuDelegate rightMenuWillOpen];
     if (!self.darknessView)
@@ -598,6 +598,16 @@ static NSMutableArray *allInstances;
     
     CGRect frame = self.currentActiveNVC.view.frame;
     frame.origin.x = -1 *[self rightMenuWidth];
+    
+    /*UIViewController *rootViewController = [self.currentActiveNVC.viewControllers objectAtIndex:0];
+    for(UIView *v in rootViewController.view.subviews)
+    {
+        if(v.tag == 1001)
+        {
+            IIIFlowView *flowView = (IIIFlowView*)v;
+            [flowView hideDownloadingPlaceholder];
+        }
+    }*/
     
     [UIView animateWithDuration:animated ? self.openAnimationDuration : 0 animations:^{
         self.currentActiveNVC.view.frame = frame;

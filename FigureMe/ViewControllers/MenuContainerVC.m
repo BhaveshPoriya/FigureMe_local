@@ -66,7 +66,7 @@
             
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             
-            [defaults setBool:nil forKey:@"isLoggedIn"];
+            [defaults setObject:nil forKey:@"isLoggedIn"];
             [defaults setObject:nil forKey:@"userID"];
             
             [defaults synchronize];

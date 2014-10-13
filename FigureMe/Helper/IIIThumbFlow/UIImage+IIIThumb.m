@@ -93,7 +93,7 @@
     rect = CGRectMake(0, 0, w, h);
     CGContextSetRGBFillColor(ctx, 1.0, 1.0, 1.0, 1.0);
     CGContextFillRect(ctx, rect);
-    CGFloat p = width / iii_thumb_padding_rate;
+    //CGFloat p = width / iii_thumb_padding_rate;
     //[self drawInRect:CGRectMake(p, p, w-p*2, h-p*2)];
     [self drawInRect:CGRectMake(0, 0, w, h)];
     UIImage *thumb = UIGraphicsGetImageFromCurrentImageContext();

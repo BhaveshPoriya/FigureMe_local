@@ -41,6 +41,8 @@ const CGFloat INDICATOR_SIZE = 20;
     NSMutableDictionary *_downloadingURLs;
     
     CGFloat _cellPadding;
+    
+    UIView *overlay;
 }
 // Put reusable cells in this pool, to reduce memory cost if data source is huge.
 @property (strong, nonatomic) NSMutableDictionary *cellPool;
@@ -48,6 +50,7 @@ const CGFloat INDICATOR_SIZE = 20;
 @property (strong, nonatomic) NSMutableArray *cellMap;
 // Record loaded cells.
 @property (strong, nonatomic) NSMutableDictionary *loadedCells;
+@property (nonatomic) int downloadQueueCount;
 
 @end
 
@@ -67,14 +70,34 @@ const CGFloat INDICATOR_SIZE = 20;
         self.delegate = self;
         _cellPadding = iii_const_common_cell_padding;
         
+        overlay = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        UIView *tranqBack = [[UIView alloc] initWithFrame:overlay.frame];
+        tranqBack.backgroundColor = [UIColor blackColor];
+        tranqBack.alpha = 0.4f;
+        [overlay addSubview:tranqBack];
+        
+        UIActivityIndicatorView *overlayActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        overlayActivityIndicator.frame = CGRectMake((overlay.frame.size.width/2)-10, (overlay.frame.size.height/2)-10, 10, 10);
+        [overlayActivityIndicator startAnimating];
+        [overlay addSubview:overlayActivityIndicator];
+        [overlay bringSubviewToFront:overlayActivityIndicator];
+
+        [self addSubview:overlay];
+        [self bringSubviewToFront:overlay];
+        
         _downloadingPlaceholder = [[UIView alloc] initWithFrame:CGRectZero];
-        [self addSubview:_downloadingPlaceholder];
-        _downloadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, INDICATOR_SIZE, INDICATOR_SIZE)];
+        //[self addSubview:_downloadingPlaceholder];
+        _downloadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        _downloadingIndicator.frame = CGRectMake(0, 0, INDICATOR_SIZE, INDICATOR_SIZE);
         [_downloadingPlaceholder addSubview:_downloadingIndicator];
         [self hideDownloadingPlaceholder];
         
         // Tap gesture recognizer, use it to calculate selected image index
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGestureCaptured:)]];
+        
+        
+        
+        _downloadQueueCount = -1;
     }
     return self;
 }
@@ -246,7 +269,8 @@ const CGFloat INDICATOR_SIZE = 20;
     IIIFlowCell *c;
     CGPoint p;
     
-    for (int i=si; i<_cellCount && i >= 0; i+=dir) {
+    for (int i=si; i<_cellCount && i >= 0; i+=dir)
+    {
         p = [self getCellInsertPointWithIndex:i];
         // If dir == 1, check down, (p.y <= eh), if dir == -1, check up, (p.y >= eh)
         if ((p.y - eh) * dir > 0) {
@@ -268,51 +292,67 @@ const CGFloat INDICATOR_SIZE = 20;
             UIView *v = [_placeholders objectAtIndex:i];
             [self addSubview:v];
             
-        } else {
+        }
+        else
+        {
             // Load cell
             c = [self.flowDelegate flowView:self cellAtIndex:i];
             
-            if ([self loadCell:c AtIndex:i]) {
+            if ([self loadCell:c AtIndex:i])
+            {
                 CGSize z = c.frame.size;
                 c.frame = (CGRect){p, z};
                 // Add cell to loaded cells dict
                 [self.loadedCells setObject:c forKey:k];
                 [self addSubview:c];
+                [self bringSubviewToFront:overlay];
                 //NSLog(@"+ %i: %f", i, p.y);
                 // If it's the lowest cell.
-                if (i == self.cellMap.count) {
-                    if (c.isDownloading) {
+                if (i == self.cellMap.count)
+                {
+                    if (c.isDownloading)
+                    {
                         c.isDownloading = NO;
                         [self hideDownloadingPlaceholder];
                     }
+                    
                     // Add point to cell map.
                     [self.cellMap addObject:[NSValue valueWithCGRect:c.frame]];
                     // Add columnHeight.
                     int j = p.x * _columnCount / self.frame.size.width; // column number
                     CGFloat h = [[_columnHeights objectAtIndex:j] floatValue];
                     [_columnHeights setObject:[NSNumber numberWithFloat:(h+c.frame.size.height)] atIndexedSubscript:j];
+                    
                     // Add placeholder
                     CGRect rect = [[_cellMap objectAtIndex:i] CGRectValue];
                     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(rect.origin.x+_cellPadding, rect.origin.y+_cellPadding, rect.size.width-_cellPadding*2, rect.size.height-_cellPadding*2)];
-                    v.backgroundColor = [UIColor whiteColor];
+                    //v.backgroundColor = [UIColor whiteColor];
+                    v.backgroundColor = [UIColor redColor];
                     
                     [_placeholders setObject:v atIndexedSubscript:i];
                     
-                } else {
+                }
+                else
+                {
                     // If load a cell with index < cellMap.count, then there must be a placeholder
                     UIView *v = [_placeholders objectAtIndex:i];
                     [v removeFromSuperview];
                 }
-            } else {
+            }
+            else
+            {
                 //NSLog(@"+* %i: %f", i, p.y);
-                if (c.isDownloading) {
-                    [self showDownloadingPlaceholder:p];
+                if (c.isDownloading)
+                {
+                    //NSLog(@"Downloading at : %f,%f",p.x,p.y);
+                    [self showDownloadingPlaceholder:p size:c.frame.size];
                 }
                 break;
             }
         } // End of load cell
     } // End of loop
-    
+    if(_downloadQueueCount == -1)
+        [overlay removeFromSuperview];
 }
 
 
@@ -359,6 +399,9 @@ const CGFloat INDICATOR_SIZE = 20;
             } else {
                 // If it's a web url, asynchronize download image, suspend loading cells
                 if (![_downloadingURLs objectForKey:d.web_url]) {
+                    
+                    _downloadQueueCount++;
+                    
                     [SDWebImageDownloader downloaderWithURL:[NSURL URLWithString:d.web_url] delegate:self userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:index] forKey:INDEX_KEY] lowPriority:YES];
                     // Mark this url as downloading, don't repeat requesting when next time check this cell.
                     [_downloadingURLs setObject:[NSString stringWithFormat:@"%i", index] forKey:d.web_url];
@@ -425,12 +468,25 @@ const CGFloat INDICATOR_SIZE = 20;
 }
 
 
-- (void)showDownloadingPlaceholder:(CGPoint)p {
+- (void)showDownloadingPlaceholder:(CGPoint)p size:(CGSize)size {
     CGRect f = _downloadingPlaceholder.frame;
+    
+    p.x = p.x + _cellPadding;
+    p.y = p.y + _cellPadding;
+    
     f.origin = p;
+    f.size = CGSizeMake(143, 97);
+    
     _downloadingPlaceholder.frame = f;
     _downloadingPlaceholder.hidden = NO;
+    _downloadingPlaceholder.layer.cornerRadius = 5.0f;
+    _downloadingPlaceholder.backgroundColor = [UIColor blackColor];
+    _downloadingPlaceholder.alpha = 0.3f;
+    
+    _downloadingIndicator.frame = CGRectMake(60, 40, INDICATOR_SIZE, INDICATOR_SIZE);
     [_downloadingIndicator startAnimating];
+    //[self sendSubviewToBack:_downloadingPlaceholder];
+    //NSLog(@"%f %f",_downloadingPlaceholder.frame.size.width,_downloadingPlaceholder.frame.size.height);
 }
 
 - (void)hideDownloadingPlaceholder {
@@ -537,10 +593,15 @@ const CGFloat INDICATOR_SIZE = 20;
 
 #pragma mark - SDWebImageDownloaderDelegate methods
 - (void)imageDownloader:(SDWebImageDownloader *)downloader didFinishWithImage:(UIImage *)image {
+    
     int index = [[downloader.userInfo objectForKey:INDEX_KEY] intValue];
     
-    NSLog(@"%d",index);
-
+    _downloadQueueCount--;
+    NSLog(@"%d %d",index,_downloadQueueCount);
+    
+    if(!_downloadQueueCount==-1)
+       [overlay removeFromSuperview];
+    
     NSString *urlStr = downloader.url.absoluteString;
     
     if ([[NSString stringWithFormat:@"%i", index] isEqualToString:[_downloadingURLs objectForKey:urlStr]]) {
@@ -563,6 +624,7 @@ const CGFloat INDICATOR_SIZE = 20;
             }
         }
     }
+
 }
 
 - (void)imageDownloader:(SDWebImageDownloader *)downloader didFailWithError:(NSError *)error {

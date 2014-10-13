@@ -41,7 +41,7 @@ txtPassword = _txtPassword;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    BOOL isLoggedIn = [defaults valueForKey:@"isLoggedIn"];
+    BOOL isLoggedIn = (BOOL)[defaults valueForKey:@"isLoggedIn"];
     
     if (isLoggedIn) {
         [self performSegueWithIdentifier:@"PushLoginToDashboard" sender:Nil];

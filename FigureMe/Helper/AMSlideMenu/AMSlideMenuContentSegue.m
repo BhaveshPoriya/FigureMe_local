@@ -99,7 +99,7 @@
         
         navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarView];
         
-        if(![navBar backgroundImageForBarMetrics:UIBarMetricsDefault])
+        //if(![navBar backgroundImageForBarMetrics:UIBarMetricsDefault])
             [navBar setBackgroundImage:[UIImage imageNamed:@"header-part.png"] forBarMetrics:UIBarMetricsDefault];
     }
 

@@ -128,6 +128,8 @@
 		F4C1E5CD19DEB8B6003C108A /* ProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C1E5CB19DEB8B6003C108A /* ProfileEditViewController.m */; };
 		F4C1E5D019DEC587003C108A /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C1E5CF19DEC587003C108A /* TestController.m */; };
 		F4C1E5D119DEC587003C108A /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C1E5CF19DEC587003C108A /* TestController.m */; };
+		F4CB48FC19EBD895000CC9D0 /* GalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB48FB19EBD895000CC9D0 /* GalleryController.m */; };
+		F4CB48FD19EBD895000CC9D0 /* GalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB48FB19EBD895000CC9D0 /* GalleryController.m */; };
 		F4CC9E6D19E5164E00B3388A /* ECSNaigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9E6C19E5164E00B3388A /* ECSNaigationItem.m */; };
 		F4CC9E6E19E5164E00B3388A /* ECSNaigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC9E6C19E5164E00B3388A /* ECSNaigationItem.m */; };
 		F4CC9E7119E51D6F00B3388A /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC9E6F19E51D6F00B3388A /* menu.png */; };
@@ -273,6 +275,8 @@
 		F4C1E5CB19DEB8B6003C108A /* ProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileEditViewController.m; path = ViewControllers/ProfileEditViewController.m; sourceTree = "<group>"; };
 		F4C1E5CE19DEC587003C108A /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestController.h; path = ViewControllers/TestController.h; sourceTree = "<group>"; };
 		F4C1E5CF19DEC587003C108A /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestController.m; path = ViewControllers/TestController.m; sourceTree = "<group>"; };
+		F4CB48FA19EBD895000CC9D0 /* GalleryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryController.h; path = ViewControllers/GalleryController.h; sourceTree = "<group>"; };
+		F4CB48FB19EBD895000CC9D0 /* GalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryController.m; path = ViewControllers/GalleryController.m; sourceTree = "<group>"; };
 		F4CC9E6B19E5164E00B3388A /* ECSNaigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSNaigationItem.h; path = CustomViews/ECSNaigationItem.h; sourceTree = "<group>"; };
 		F4CC9E6C19E5164E00B3388A /* ECSNaigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSNaigationItem.m; path = CustomViews/ECSNaigationItem.m; sourceTree = "<group>"; };
 		F4CC9E6F19E51D6F00B3388A /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
@@ -487,6 +491,8 @@
 				F4C1E5C419DE880C003C108A /* NotificationController.m */,
 				F4C1E5CE19DEC587003C108A /* TestController.h */,
 				F4C1E5CF19DEC587003C108A /* TestController.m */,
+				F4CB48FA19EBD895000CC9D0 /* GalleryController.h */,
+				F4CB48FB19EBD895000CC9D0 /* GalleryController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -887,6 +893,7 @@
 				F4B6965519E3D4F50065BF4F /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				F43FADCE19DD93AE00C620E8 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				F440AFCD19E2A19D008F7566 /* CommanFunctions.m in Sources */,
+				F4CB48FC19EBD895000CC9D0 /* GalleryController.m in Sources */,
 				F4CC9EF819E586FE00B3388A /* SDWebImageManager.m in Sources */,
 				F43FAD9B19DD558300C620E8 /* LoginController.m in Sources */,
 				F4CC9EF019E586FE00B3388A /* MKAnnotationView+WebCache.m in Sources */,
@@ -935,6 +942,7 @@
 				F4CC9EF119E586FE00B3388A /* MKAnnotationView+WebCache.m in Sources */,
 				F4CC9EF719E586FE00B3388A /* SDWebImageDownloader.m in Sources */,
 				F4C1E5C619DE880C003C108A /* NotificationController.m in Sources */,
+				F4CB48FD19EBD895000CC9D0 /* GalleryController.m in Sources */,
 				F43FADDB19DD983000C620E8 /* MenuContainerVC.m in Sources */,
 				F43FAD9C19DD558300C620E8 /* LoginController.m in Sources */,
 				F4CC9EF519E586FE00B3388A /* SDWebImageDecoder.m in Sources */,

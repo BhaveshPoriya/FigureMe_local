@@ -1,18 +1,18 @@
 //
-//  DashboardController.m
+//  GalleryController.m
 //  FigureMe
 //
-//  Created by ECSMac2 on 10/2/14.
+//  Created by bhavesh on 10/13/14.
 //  Copyright (c) 2014 ECS. All rights reserved.
 //
 
-#import "DashboardController.h"
+#import "GalleryController.h"
 
-@interface DashboardController ()
+@interface GalleryController ()
 
 @end
 
-@implementation DashboardController
+@implementation GalleryController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -99,20 +99,12 @@
     
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-- (IBAction)showRightMenuPressed:(id)sender {
-}
-
-- (IBAction)btnSeeAllClicked:(id)sender {
-    [self performSegueWithIdentifier:@"PushDashboardToGallery" sender:self];
-}
-
 
 #pragma mark - IIIFlowView delegate required methods
 
