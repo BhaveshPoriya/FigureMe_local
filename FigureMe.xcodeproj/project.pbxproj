@@ -18,6 +18,46 @@
 		C3235A9719E2DD8C00263F98 /* bgBump.png in Resources */ = {isa = PBXBuildFile; fileRef = C3235A9519E2DD8C00263F98 /* bgBump.png */; };
 		C3235A9919E2E00000263F98 /* passwordlogin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3235A9819E2E00000263F98 /* passwordlogin.png */; };
 		C3235A9A19E2E00000263F98 /* passwordlogin.png in Resources */ = {isa = PBXBuildFile; fileRef = C3235A9819E2E00000263F98 /* passwordlogin.png */; };
+		C32FDB9919E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
+		C32FDB9A19E7C33500CD60BE /* StatInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9819E7C33500CD60BE /* StatInfoCell.m */; };
+		C32FDB9D19E7CAFD00CD60BE /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */; };
+		C32FDB9E19E7CAFD00CD60BE /* StatYourScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */; };
+		C32FDBA119E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
+		C32FDBA219E7D30D00CD60BE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA019E7D30D00CD60BE /* cross.png */; };
+		C32FDBB119E7E92A00CD60BE /* deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */; };
+		C32FDBB219E7E92A00CD60BE /* deleted-friends-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */; };
+		C32FDBB319E7E92A00CD60BE /* deleted-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA419E7E92A00CD60BE /* deleted-friends.png */; };
+		C32FDBB419E7E92A00CD60BE /* deleted-friends.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA419E7E92A00CD60BE /* deleted-friends.png */; };
+		C32FDBB519E7E92A00CD60BE /* footer-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA519E7E92A00CD60BE /* footer-bg.png */; };
+		C32FDBB619E7E92A00CD60BE /* footer-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA519E7E92A00CD60BE /* footer-bg.png */; };
+		C32FDBB719E7E92A00CD60BE /* footer-hover-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA619E7E92A00CD60BE /* footer-hover-bg.png */; };
+		C32FDBB819E7E92A00CD60BE /* footer-hover-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA619E7E92A00CD60BE /* footer-hover-bg.png */; };
+		C32FDBB919E7E92A00CD60BE /* gray-texture-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA719E7E92A00CD60BE /* gray-texture-bg.png */; };
+		C32FDBBA19E7E92A00CD60BE /* gray-texture-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA719E7E92A00CD60BE /* gray-texture-bg.png */; };
+		C32FDBBB19E7E92A00CD60BE /* header-part.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA819E7E92A00CD60BE /* header-part.png */; };
+		C32FDBBC19E7E92A00CD60BE /* header-part.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA819E7E92A00CD60BE /* header-part.png */; };
+		C32FDBBD19E7E92A00CD60BE /* johndoe-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA919E7E92A00CD60BE /* johndoe-bg.png */; };
+		C32FDBBE19E7E92A00CD60BE /* johndoe-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBA919E7E92A00CD60BE /* johndoe-bg.png */; };
+		C32FDBBF19E7E92A00CD60BE /* johndoe-last-nav.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAA19E7E92A00CD60BE /* johndoe-last-nav.png */; };
+		C32FDBC019E7E92A00CD60BE /* johndoe-last-nav.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAA19E7E92A00CD60BE /* johndoe-last-nav.png */; };
+		C32FDBC119E7E92A00CD60BE /* middle-johndoe-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAB19E7E92A00CD60BE /* middle-johndoe-bg.png */; };
+		C32FDBC219E7E92A00CD60BE /* middle-johndoe-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAB19E7E92A00CD60BE /* middle-johndoe-bg.png */; };
+		C32FDBC319E7E92A00CD60BE /* score-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAC19E7E92A00CD60BE /* score-hover.png */; };
+		C32FDBC419E7E92A00CD60BE /* score-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAC19E7E92A00CD60BE /* score-hover.png */; };
+		C32FDBC519E7E92A00CD60BE /* screen-shot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAD19E7E92A00CD60BE /* screen-shot.jpg */; };
+		C32FDBC619E7E92A00CD60BE /* screen-shot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAD19E7E92A00CD60BE /* screen-shot.jpg */; };
+		C32FDBC719E7E92A00CD60BE /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAE19E7E92A00CD60BE /* scroll.png */; };
+		C32FDBC819E7E92A00CD60BE /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAE19E7E92A00CD60BE /* scroll.png */; };
+		C32FDBC919E7E92A00CD60BE /* your score.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAF19E7E92A00CD60BE /* your score.png */; };
+		C32FDBCA19E7E92A00CD60BE /* your score.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBAF19E7E92A00CD60BE /* your score.png */; };
+		C32FDBCB19E7E92A00CD60BE /* your-score-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBB019E7E92A00CD60BE /* your-score-hover.png */; };
+		C32FDBCC19E7E92A00CD60BE /* your-score-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C32FDBB019E7E92A00CD60BE /* your-score-hover.png */; };
+		C3BC2F0419E8133A00295626 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BC2F0319E8133A00295626 /* Score.m */; };
+		C3BC2F0519E8133A00295626 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BC2F0319E8133A00295626 /* Score.m */; };
+		C3BC2F0919E8170700295626 /* scrore.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0819E8170700295626 /* scrore.png */; };
+		C3BC2F0A19E8170700295626 /* scrore.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0819E8170700295626 /* scrore.png */; };
+		C3BC2F0C19E8178A00295626 /* your-scrore-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */; };
+		C3BC2F0D19E8178A00295626 /* your-scrore-hover.png in Resources */ = {isa = PBXBuildFile; fileRef = C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */; };
 		F43FAD4A19DD3C2300C620E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4919DD3C2300C620E8 /* Foundation.framework */; };
 		F43FAD4C19DD3C2300C620E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */; };
 		F43FAD4E19DD3C2300C620E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43FAD4D19DD3C2300C620E8 /* UIKit.framework */; };
@@ -187,6 +227,29 @@
 		C3235A9219E2DD3800263F98 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		C3235A9519E2DD8C00263F98 /* bgBump.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgBump.png; path = Resources/images/bump/bgBump.png; sourceTree = "<group>"; };
 		C3235A9819E2E00000263F98 /* passwordlogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passwordlogin.png; path = Resources/images/login/passwordlogin.png; sourceTree = "<group>"; };
+		C32FDB9719E7C33500CD60BE /* StatInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatInfoCell.h; path = CustomCells/StatInfoCell.h; sourceTree = "<group>"; };
+		C32FDB9819E7C33500CD60BE /* StatInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatInfoCell.m; path = CustomCells/StatInfoCell.m; sourceTree = "<group>"; };
+		C32FDB9B19E7CAFD00CD60BE /* StatYourScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatYourScore.h; path = ViewControllers/StatYourScore.h; sourceTree = "<group>"; };
+		C32FDB9C19E7CAFD00CD60BE /* StatYourScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatYourScore.m; path = ViewControllers/StatYourScore.m; sourceTree = "<group>"; };
+		C32FDBA019E7D30D00CD60BE /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleted-friends-hover.png"; sourceTree = "<group>"; };
+		C32FDBA419E7E92A00CD60BE /* deleted-friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleted-friends.png"; sourceTree = "<group>"; };
+		C32FDBA519E7E92A00CD60BE /* footer-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer-bg.png"; sourceTree = "<group>"; };
+		C32FDBA619E7E92A00CD60BE /* footer-hover-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer-hover-bg.png"; sourceTree = "<group>"; };
+		C32FDBA719E7E92A00CD60BE /* gray-texture-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-texture-bg.png"; sourceTree = "<group>"; };
+		C32FDBA819E7E92A00CD60BE /* header-part.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header-part.png"; sourceTree = "<group>"; };
+		C32FDBA919E7E92A00CD60BE /* johndoe-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "johndoe-bg.png"; sourceTree = "<group>"; };
+		C32FDBAA19E7E92A00CD60BE /* johndoe-last-nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "johndoe-last-nav.png"; sourceTree = "<group>"; };
+		C32FDBAB19E7E92A00CD60BE /* middle-johndoe-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middle-johndoe-bg.png"; sourceTree = "<group>"; };
+		C32FDBAC19E7E92A00CD60BE /* score-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "score-hover.png"; sourceTree = "<group>"; };
+		C32FDBAD19E7E92A00CD60BE /* screen-shot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-shot.jpg"; sourceTree = "<group>"; };
+		C32FDBAE19E7E92A00CD60BE /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll.png; sourceTree = "<group>"; };
+		C32FDBAF19E7E92A00CD60BE /* your score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "your score.png"; sourceTree = "<group>"; };
+		C32FDBB019E7E92A00CD60BE /* your-score-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "your-score-hover.png"; sourceTree = "<group>"; };
+		C3BC2F0219E8133A00295626 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Models/Score.h; sourceTree = "<group>"; };
+		C3BC2F0319E8133A00295626 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Models/Score.m; sourceTree = "<group>"; };
+		C3BC2F0819E8170700295626 /* scrore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrore.png; sourceTree = "<group>"; };
+		C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "your-scrore-hover.png"; sourceTree = "<group>"; };
 		F43FAD4619DD3C2300C620E8 /* FigureMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigureMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43FAD4919DD3C2300C620E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F43FAD4B19DD3C2300C620E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -356,6 +419,47 @@
 			path = Resources/images/Common;
 			sourceTree = "<group>";
 		};
+		C32FDB9F19E7D30D00CD60BE /* stats */ = {
+			isa = PBXGroup;
+			children = (
+				C32FDBA319E7E92A00CD60BE /* deleted-friends-hover.png */,
+				C32FDBA419E7E92A00CD60BE /* deleted-friends.png */,
+				C32FDBA519E7E92A00CD60BE /* footer-bg.png */,
+				C32FDBA619E7E92A00CD60BE /* footer-hover-bg.png */,
+				C32FDBA719E7E92A00CD60BE /* gray-texture-bg.png */,
+				C32FDBA819E7E92A00CD60BE /* header-part.png */,
+				C32FDBA919E7E92A00CD60BE /* johndoe-bg.png */,
+				C32FDBAA19E7E92A00CD60BE /* johndoe-last-nav.png */,
+				C32FDBAB19E7E92A00CD60BE /* middle-johndoe-bg.png */,
+				C32FDBAC19E7E92A00CD60BE /* score-hover.png */,
+				C32FDBAD19E7E92A00CD60BE /* screen-shot.jpg */,
+				C32FDBAE19E7E92A00CD60BE /* scroll.png */,
+				C32FDBAF19E7E92A00CD60BE /* your score.png */,
+				C32FDBB019E7E92A00CD60BE /* your-score-hover.png */,
+				C32FDBA019E7D30D00CD60BE /* cross.png */,
+			);
+			name = stats;
+			path = Resources/images/stats;
+			sourceTree = "<group>";
+		};
+		C3BC2F0619E8170700295626 /* Iphone */ = {
+			isa = PBXGroup;
+			children = (
+				C3BC2F0719E8170700295626 /* stat-Iphone */,
+			);
+			name = Iphone;
+			path = Resources/Iphone;
+			sourceTree = "<group>";
+		};
+		C3BC2F0719E8170700295626 /* stat-Iphone */ = {
+			isa = PBXGroup;
+			children = (
+				C3BC2F0B19E8178A00295626 /* your-scrore-hover.png */,
+				C3BC2F0819E8170700295626 /* scrore.png */,
+			);
+			path = "stat-Iphone";
+			sourceTree = "<group>";
+		};
 		F43FAD3D19DD3C2300C620E8 = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +570,8 @@
 			children = (
 				F4CC9E8519E54ADD00B3388A /* GalleryPhotoCell.h */,
 				F4CC9E8619E54ADD00B3388A /* GalleryPhotoCell.m */,
+				C32FDB9719E7C33500CD60BE /* StatInfoCell.h */,
+				C32FDB9819E7C33500CD60BE /* StatInfoCell.m */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -623,6 +729,8 @@
 		F4C1E5B319DE82A2003C108A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C3BC2F0619E8170700295626 /* Iphone */,
+				C32FDB9F19E7D30D00CD60BE /* stats */,
 				F4CC9EC719E5761700B3388A /* Dashboard */,
 				F4CC9E8419E53D6400B3388A /* SideMenu */,
 				F440AFCF19E2B563008F7566 /* bump */,
@@ -636,6 +744,8 @@
 		F4C7CA6D19E009E10072610B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3BC2F0219E8133A00295626 /* Score.h */,
+				C3BC2F0319E8133A00295626 /* Score.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -772,6 +882,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32FDBA119E7D30D00CD60BE /* cross.png in Resources */,
 				F4CC9E7C19E5286C00B3388A /* header-logo.png in Resources */,
 				F4CC9EC919E5762500B3388A /* see-all.png in Resources */,
 				F440B00819E2B5C4008F7566 /* email.png in Resources */,
@@ -779,25 +890,36 @@
 				F4CC9E8219E53D5000B3388A /* gray-bg.png in Resources */,
 				C3235A9319E2DD3800263F98 /* bg.png in Resources */,
 				F4C04CD519E6C30C00556BA5 /* OpenSans-BoldItalic.ttf in Resources */,
+				C32FDBBB19E7E92A00CD60BE /* header-part.png in Resources */,
+				C32FDBC519E7E92A00CD60BE /* screen-shot.jpg in Resources */,
 				C3235A8619E2CC5400263F98 /* registerlogin.png in Resources */,
+				C3BC2F0919E8170700295626 /* scrore.png in Resources */,
 				C3235A8019E2C68C00263F98 /* login-userbg.png in Resources */,
+				C32FDBBF19E7E92A00CD60BE /* johndoe-last-nav.png in Resources */,
+				C32FDBB319E7E92A00CD60BE /* deleted-friends.png in Resources */,
+				C32FDBC919E7E92A00CD60BE /* your score.png in Resources */,
+				C3BC2F0C19E8178A00295626 /* your-scrore-hover.png in Resources */,
 				F4C04CD319E6C30C00556BA5 /* OpenSans-Bold.ttf in Resources */,
 				F4C04CE119E6C30C00556BA5 /* OpenSans-Regular.ttf in Resources */,
 				C3235A8119E2C68C00263F98 /* login-username.png in Resources */,
 				F4C04CD919E6C30C00556BA5 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				F440AFF019E2B5B7008F7566 /* password-hint.png in Resources */,
 				F4B6966419E429180065BF4F /* screen-shot.png in Resources */,
+				C32FDBC319E7E92A00CD60BE /* score-hover.png in Resources */,
 				F440AFEE19E2B5B7008F7566 /* logo.png in Resources */,
 				F4CC9E7119E51D6F00B3388A /* menu.png in Resources */,
 				F4B6966119E413700065BF4F /* wrong.png in Resources */,
 				F440B00619E2B5C4008F7566 /* cancel.png in Resources */,
+				C32FDBB519E7E92A00CD60BE /* footer-bg.png in Resources */,
 				F4C04CDD19E6C30C00556BA5 /* OpenSans-Light.ttf in Resources */,
 				F440B01619E2B5C4008F7566 /* username-bg.png in Resources */,
 				F4C04CC619E6AA4C00556BA5 /* galler-scrore-count.png in Resources */,
+				C32FDBCB19E7E92A00CD60BE /* your-score-hover.png in Resources */,
 				F440AFF619E2B5B7008F7566 /* screen-shot.jpg in Resources */,
 				F4C04CDF19E6C30C00556BA5 /* OpenSans-LightItalic.ttf in Resources */,
 				F43FAD5419DD3C2400C620E8 /* InfoPlist.strings in Resources */,
 				F4CC9E7F19E53AF000B3388A /* header-part.png in Resources */,
+				C32FDBC119E7E92A00CD60BE /* middle-johndoe-bg.png in Resources */,
 				F440B01819E2B5C4008F7566 /* username.png in Resources */,
 				C3235A7D19E2C61900263F98 /* Reg-screen-shot.jpg in Resources */,
 				F4C1E5B119DE7C16003C108A /* Storyboard-iPad.storyboard in Resources */,
@@ -805,9 +927,14 @@
 				F440AFEC19E2B5B7008F7566 /* login.png in Resources */,
 				F4C04CD719E6C30C00556BA5 /* OpenSans-ExtraBold.ttf in Resources */,
 				F4C04CE519E6C30C00556BA5 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				C32FDBB719E7E92A00CD60BE /* footer-hover-bg.png in Resources */,
 				F440B00E19E2B5C4008F7566 /* password.png in Resources */,
 				F4C04CDB19E6C30C00556BA5 /* OpenSans-Italic.ttf in Resources */,
+				C32FDBB119E7E92A00CD60BE /* deleted-friends-hover.png in Resources */,
 				C3235A7919E2B97C00263F98 /* logoRegister.png in Resources */,
+				C32FDBC719E7E92A00CD60BE /* scroll.png in Resources */,
+				C32FDBBD19E7E92A00CD60BE /* johndoe-bg.png in Resources */,
+				C32FDBB919E7E92A00CD60BE /* gray-texture-bg.png in Resources */,
 				C3235A9919E2E00000263F98 /* passwordlogin.png in Resources */,
 				F43FAD5C19DD3C2400C620E8 /* Images.xcassets in Resources */,
 				F4B6965F19E413700065BF4F /* right.png in Resources */,
@@ -823,25 +950,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32FDBB419E7E92A00CD60BE /* deleted-friends.png in Resources */,
+				C32FDBC219E7E92A00CD60BE /* middle-johndoe-bg.png in Resources */,
+				C32FDBBA19E7E92A00CD60BE /* gray-texture-bg.png in Resources */,
 				F440B01719E2B5C4008F7566 /* username-bg.png in Resources */,
 				F440AFEF19E2B5B7008F7566 /* logo.png in Resources */,
 				F4CC9E7219E51D6F00B3388A /* menu.png in Resources */,
 				F4CC9E8319E53D5000B3388A /* gray-bg.png in Resources */,
+				C32FDBC819E7E92A00CD60BE /* scroll.png in Resources */,
+				C32FDBB219E7E92A00CD60BE /* deleted-friends-hover.png in Resources */,
 				F4C04CDE19E6C30C00556BA5 /* OpenSans-Light.ttf in Resources */,
+				C32FDBBC19E7E92A00CD60BE /* header-part.png in Resources */,
 				C3235A9419E2DD3800263F98 /* bg.png in Resources */,
 				C3235A9719E2DD8C00263F98 /* bgBump.png in Resources */,
+				C32FDBC419E7E92A00CD60BE /* score-hover.png in Resources */,
 				F4C04CC719E6AA4C00556BA5 /* galler-scrore-count.png in Resources */,
 				F4C04CDA19E6C30C00556BA5 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				C32FDBCA19E7E92A00CD60BE /* your score.png in Resources */,
+				C32FDBCC19E7E92A00CD60BE /* your-score-hover.png in Resources */,
 				F4C04CE019E6C30C00556BA5 /* OpenSans-LightItalic.ttf in Resources */,
 				F440B01919E2B5C4008F7566 /* username.png in Resources */,
 				F440B00719E2B5C4008F7566 /* cancel.png in Resources */,
 				F440AFED19E2B5B7008F7566 /* login.png in Resources */,
+				C32FDBC019E7E92A00CD60BE /* johndoe-last-nav.png in Resources */,
 				F4CC9E8019E53AF000B3388A /* header-part.png in Resources */,
 				F4C04CDC19E6C30C00556BA5 /* OpenSans-Italic.ttf in Resources */,
 				F440B01319E2B5C4008F7566 /* register.png in Resources */,
 				F440AFF119E2B5B7008F7566 /* password-hint.png in Resources */,
 				F4C1E5B219DE7C16003C108A /* Storyboard-iPad.storyboard in Resources */,
 				F4B6966219E413700065BF4F /* wrong.png in Resources */,
+				C3BC2F0A19E8170700295626 /* scrore.png in Resources */,
+				C32FDBB819E7E92A00CD60BE /* footer-hover-bg.png in Resources */,
+				C32FDBB619E7E92A00CD60BE /* footer-bg.png in Resources */,
 				F43FAD6D19DD3C2400C620E8 /* InfoPlist.strings in Resources */,
 				F4CC9E7419E51D6F00B3388A /* notification.png in Resources */,
 				F4CC9ECA19E5762500B3388A /* see-all.png in Resources */,
@@ -849,6 +989,7 @@
 				F440B01119E2B5C4008F7566 /* reapeat-password.png in Resources */,
 				F4C04CE419E6C30C00556BA5 /* OpenSans-Semibold.ttf in Resources */,
 				F4C04CD419E6C30C00556BA5 /* OpenSans-Bold.ttf in Resources */,
+				C32FDBBE19E7E92A00CD60BE /* johndoe-bg.png in Resources */,
 				F440AFF719E2B5B7008F7566 /* screen-shot.jpg in Resources */,
 				F43FAD9319DD500100C620E8 /* Storyboard.storyboard in Resources */,
 				F4B6966019E413700065BF4F /* right.png in Resources */,
@@ -856,7 +997,10 @@
 				F440B00F19E2B5C4008F7566 /* password.png in Resources */,
 				F440B00B19E2B5C4008F7566 /* header-part.png in Resources */,
 				F4B6966519E429180065BF4F /* screen-shot.png in Resources */,
+				C32FDBA219E7D30D00CD60BE /* cross.png in Resources */,
+				C3BC2F0D19E8178A00295626 /* your-scrore-hover.png in Resources */,
 				F4C04CD819E6C30C00556BA5 /* OpenSans-ExtraBold.ttf in Resources */,
+				C32FDBC619E7E92A00CD60BE /* screen-shot.jpg in Resources */,
 				F440B00919E2B5C4008F7566 /* email.png in Resources */,
 				F4C04CE219E6C30C00556BA5 /* OpenSans-Regular.ttf in Resources */,
 				F4C04CE619E6C30C00556BA5 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -872,6 +1016,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B6965719E3D4F50065BF4F /* TPKeyboardAvoidingScrollView.m in Sources */,
+				C32FDB9D19E7CAFD00CD60BE /* StatYourScore.m in Sources */,
 				F4CC9E6D19E5164E00B3388A /* ECSNaigationItem.m in Sources */,
 				F43FADC819DD93AE00C620E8 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				F4C1E5C119DE87DF003C108A /* ProfileController.m in Sources */,
@@ -888,6 +1033,8 @@
 				F4CC9ED919E5868D00B3388A /* IIIFlowCell.m in Sources */,
 				F43FAD5619DD3C2400C620E8 /* main.m in Sources */,
 				F43FADC619DD93AE00C620E8 /* AMSlideMenuContentSegue.m in Sources */,
+				C3BC2F0419E8133A00295626 /* Score.m in Sources */,
+				C32FDB9919E7C33500CD60BE /* StatInfoCell.m in Sources */,
 				F4CC9EF419E586FE00B3388A /* SDWebImageDecoder.m in Sources */,
 				F4CC9ED719E5868D00B3388A /* IIIBaseData.m in Sources */,
 				F4B6965519E3D4F50065BF4F /* TPKeyboardAvoidingCollectionView.m in Sources */,
@@ -917,6 +1064,7 @@
 				F43FADB319DD71A800C620E8 /* DashboardController.m in Sources */,
 				F4B6965819E3D4F50065BF4F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				F4B6965619E3D4F50065BF4F /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				C32FDB9A19E7C33500CD60BE /* StatInfoCell.m in Sources */,
 				F4CC9EF919E586FE00B3388A /* SDWebImageManager.m in Sources */,
 				F43FADC919DD93AE00C620E8 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				F43FAD6F19DD3C2400C620E8 /* FigureMeTests.m in Sources */,
@@ -949,6 +1097,7 @@
 				F43FADA019DD55A700C620E8 /* RegisterController.m in Sources */,
 				F4CC9EDE19E5868D00B3388A /* SDImageCache+IIIThumb.m in Sources */,
 				F4CC9E8819E54ADD00B3388A /* GalleryPhotoCell.m in Sources */,
+				C3BC2F0519E8133A00295626 /* Score.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
