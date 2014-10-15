@@ -92,5 +92,16 @@
     
     return [self generateAPIRequest:_URL reqDist:reqDist];
 }
++(NSMutableURLRequest *)getScoreRequest:(NSString *)Score
+{
+    NSMutableDictionary *reqDist = [[NSMutableDictionary alloc] init];
+    [reqDist setObject:Score forKey:@"userid"];
+    [reqDist setObject:@"get_score" forKey:@"action"];
+    
+    NSString *_URL =[NSString stringWithFormat:@"%@/get_score", @APIRootURL];
+    
+    return [self generateAPIRequest:_URL reqDist:reqDist];
+}
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Score.h"
 
 @interface StatYourScore : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tblViewStatYourScore;
